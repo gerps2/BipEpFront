@@ -1,0 +1,100 @@
+<div class="inner-wrapper">
+  <!-- start: sidebar -->
+  <aside id="sidebar-left" class="sidebar-left">
+
+    <div class="sidebar-header">
+      <div class="sidebar-title">
+        Navegação
+      </div>
+      <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+      </div>
+    </div>
+
+    <div class="nano">
+      <div class="nano-content">
+        <nav id="menu" class="nav-main" role="navigation">
+          <ul class="nav nav-main">
+            <li>
+              <a>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span>Quem Somos</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span>Projeto</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span>Epilepsia</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span>Trauma Cranioencefálico </span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span>Nossa Motivação </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+  </aside>
+  <!-- end: sidebar -->
+
+  <section role="main" class="content-body">
+    <header class="page-header">
+      <h2>Home</h2>
+    </header>
+  <!-- start: page -->
+  <div class="inner-toolbar clearfix">
+    <ul>
+        <li class="right">
+            <ul class="nav nav-pills nav-pills-primary">
+                    <li>
+                        <label>Acessar Area</label>
+                    </li>
+                    <li *ngIf="permissions == 2  || permissions == 1">
+                        <button type="submit" class="mb-xs mt-xs mr-xs btn btn-default">Paciente</button>
+                    </li>
+                    <li *ngIf="permissions == 3 || permissions == 1">
+                        <button type="submit" class="mb-xs mt-xs mr-xs btn btn-default">Equipe</button>
+                    </li>
+                    <li *ngIf="permissions == 1">
+                        <button type="submit" class="mb-xs mt-xs mr-xs btn btn-default">Cadastrar Usuario</button>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+  <br>
+  <h1 *ngIf="permissions == 1" class="mt-4">Olá, Admin <br>
+    <h1>{{currentUser.user.nome + currentUser.user.sobrenome}}</h1>
+  </h1>
+  <h1 *ngIf="permissions == 2" class="mt-4">Olá, Paciente <br>
+    <h1>{{currentUser.user.nome + currentUser.user.sobrenome}}</h1>
+  </h1>
+  <h1 *ngIf="permissions == 3" class="mt-4">Olá, Equipe <br>
+    <h1>{{currentUser.user.nome + currentUser.user.sobrenome}}</h1>
+  </h1>
+  <!-- end: page -->
+  </section>
+</div>

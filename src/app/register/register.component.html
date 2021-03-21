@@ -1,0 +1,92 @@
+	<body>
+		<!-- start: page -->
+		<section class="body-sign">
+			<div class="center-sign">
+				<a href="/" class="logo pull-left">
+				</a>
+				<div class="panel panel-sign">
+					<div class="panel-title-sign mt-xl text-right">
+						<h2 class="title text-uppercase text-bold m-none"><i class="fa fa-user mr-xs"></i>Cadastrar</h2>
+					</div>
+					<div class="panel-body">
+						<form >
+							<div class="form-group mb-lg">
+								<label>Nome Completo</label>
+								<input name="nome" type="text" class="form-control input-lg" required />
+							</div>
+
+							<div class="form-group mb-lg">
+								<label>Endereco de E-Mail</label>
+								<input name="email" type="email" class="form-control input-lg" required/>
+							</div>
+
+							<div class="form-group mb-lg">
+								<label>Login</label>
+								<input id="login" name="login" type="text" class="form-control input-lg" required />
+							</div>
+
+							<div class="form-group mb-none">
+								<div class="row">
+									<div class="col-sm-6 mb-lg">
+										<label>Senha</label>
+										<input name="Senha" type="password" class="form-control input-lg" />
+									</div>
+									<div class="col-sm-6 mb-lg">
+										<label>Confirmacao de Senha</label>
+										<input name="senhaConfirmacao" type="password" class="form-control input-lg" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group mb-none">
+									<div class="col-sm-6 mb-lg">
+										<label >Hospital</label>
+										<select id="hospital" class="form-control" required>
+											<option value="">Escolha o Hospital</option>
+										</select>
+										<label class="error" for="company"></label>
+                    <label >Hospital</label>
+										<select id="company" class="form-control" required>
+											<option value="">Escolha a Area</option>
+											<option name="hospital" ></option>
+										</select>
+										<label class="error" for="company"></label>
+									</div>
+                  <div class="row">
+									<div class="form-group">
+										<label class="col-sm-3 control-label">Permisao</label>
+										<div class="col-sm-6 mb-lg">
+											<div class="radio-custom radio-primary">
+												<input id="awesome" name="permissao" type="radio" value="2" required />
+												<label for="awesome">Administrador</label>
+											</div>
+											<div class="radio-custom radio-primary">
+												<input id="very-awesome" name="permissao" type="radio" value="3" />
+												<label for="very-awesome">Equipe Hospital</label>
+											</div>
+											<div class="radio-custom radio-primary">
+												<input id="ultra-awesome" name="permissao" type="radio" value="4" />
+												<label for="ultra-awesome">Paciente Hospital</label>
+											</div>
+											<label class="error" for="porto_is"></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3 pull-right">
+									<button type="submit" class="btn btn-primary hidden-xs">Cadastrar</button>
+								</div>
+                <div class="col-sm-9 pull-left">
+                  <p class="pull-left"> Voltar para a <a href="/">Home</a>
+                </div>
+							</div>
+ 						</form>
+					</div>
+				</div>
+
+				<p class="text-center text-muted mt-md mb-md">&copy; Copyright 2020. All Rights Reserved.</p>
+			</div>
+		</section>
+		<!-- end: page -->
+		<!-- Vendor -->
+	</body>
